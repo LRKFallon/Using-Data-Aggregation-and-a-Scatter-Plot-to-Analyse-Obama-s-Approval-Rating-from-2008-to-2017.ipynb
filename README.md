@@ -1,52 +1,52 @@
 # Using-Data-Aggregation-to-Analyse-Obama-s-Approval-Rating-from-2008-to-2017
 Scatter graph, with median and percentile plots, displaying Obama's approval ratings from 2008 to 2017, using data imported from a CSV file.
-# This was formatted for Jupyter Notebook.
+#### This was formatted for Jupyter Notebook.
 
-# Importing the libraries and modules:
+#### Importing the libraries and modules:
 import pandas as pd
 from matplotlib import pyplot as plt
 
-# Importing the data from a .csv file:
+#### Importing the data from a .csv file:
 data = pd.read_csv('obama.csv', parse_dates=['year_month'])
-# Using the parse_dates functions will instruct pandas to interpret the year's month as 
-#  a series time stamps instead of as a string. A series of time stamps is needed to plot a
-#  time series graph.
+#### Using the parse_dates functions will instruct pandas to interpret the year's month as 
+####  a series time stamps instead of as a string. A series of time stamps is needed to plot a
+####  time series graph.
 data.head()
 
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 plt.show()
 
-# To aggregate the data and summarise it, one method that is effective is to use the mean
-#  approval percentage for each month. This can be acheived by using the groupby function:
+#### To aggregate the data and summarise it, one method that is effective is to use the mean
+####  approval percentage for each month. This can be acheived by using the groupby function:
 
 data.groupby('year_month').mean()
 
-# This shows the mean approval percentage adn mean disapproval percentage for each month.
+#### This shows the mean approval percentage adn mean disapproval percentage for each month.
 
-# To show the mean:
+#### To show the mean:
 data_mean = data.groupby('year_month').mean()
-# To also show the median as well as the mean:
+#### To also show the median as well as the mean:
 data_median = data.groupby('year_month').median()
 
 
 plt.plot(data_mean.index,data_mean.approve_percent, 'red')
-# data_mean.index provides the year's month column, treated as an index column in the 
-#  data_mean data frame.
+#### data_mean.index provides the year's month column, treated as an index column in the 
+####  data_mean data frame.
 
 plt.plot(data_median.index, data_median.approve_percent, 'green')
 
 plt.legend(['Mean', 'Median'])
 
-# These data_mean and median lines can be shown along side the oringal scatter graph data 
-#  points by plotting:
+#### These data_mean and median lines can be shown along side the oringal scatter graph data 
+####  points by plotting:
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 
 
 plt.show()
 
-# Ploting the main graph:
+#### Ploting the main graph:
 
-# To find the 25th and 75th percentiles:
+#### To find the 25th and 75th percentiles:
 
 data_25 = data.groupby('year_month').quantile(0.25)
 data_75 = data.groupby('year_month').quantile(0.75)
