@@ -44,7 +44,7 @@ plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 
 plt.show()
 
-# Ploting the main graph"
+# Ploting the main graph:
 
 # To find the 25th and 75th percentiles:
 
