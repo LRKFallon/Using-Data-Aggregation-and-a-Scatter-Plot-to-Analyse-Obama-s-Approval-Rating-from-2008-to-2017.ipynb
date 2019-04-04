@@ -1,11 +1,10 @@
 # Using-Data-Aggregation-to-Analyse-Obama-s-Approval-Rating-from-2008-to-2017
-Scatter graph, with median and percentile plots, displaying Obama's approval ratings from 2008 to 2017, using data imported from a CSV file.
+#### Scatter graph, with median and percentile plots, displaying Obama's approval ratings from 2008 to 2017, using data imported from a CSV file. This was formatted for Jupyter Notebook.
 
 ![Using Data Aggregation to Analyse Obama's Approval Ratings](https://user-images.githubusercontent.com/48648985/55397104-53466880-553d-11e9-8c1d-f2494a23feb5.png)
 
 
 
-#### This was formatted for Jupyter Notebook.
 
 #### Importing the libraries and modules:
 import pandas as pd
@@ -44,6 +43,7 @@ plt.legend(['Mean', 'Median'])
 
 #### These data_mean and median lines can be shown along side the oringal scatter graph data 
 ####  points by plotting:
+
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 
 
