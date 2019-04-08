@@ -77,3 +77,5 @@ plt.ylabel('A P P R O V A L %', fontsize='20', color='forestgreen')
 plt.title('O B A M A \'S     A P P R O V A L     R A T I N G    %', fontsize='28', 
           color='forestgreen')
 plt.show()
+
+![04 Obamas Approval Ratings main scatter plot time series](https://user-images.githubusercontent.com/48648985/55744232-5a351580-5a2c-11e9-87a5-07401e39f565.png)
