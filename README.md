@@ -46,13 +46,16 @@ plt.plot(data_median.index, data_median.approve_percent, 'green')
 
 plt.legend(['Mean', 'Median'])
 
-#### These data_mean and median lines can be shown along side the oringal scatter graph data 
+#### These data_mean and median lines can be shown along side the original scatter graph data 
 ####  points by plotting:
 
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 
 
 plt.show()
+
+![03 Mean approval percentage and mean disapproval percentage columns](https://user-images.githubusercontent.com/48648985/55744038-d1b67500-5a2b-11e9-8ea6-719238296058.png)
+
 
 ### Ploting the main graph:
 
