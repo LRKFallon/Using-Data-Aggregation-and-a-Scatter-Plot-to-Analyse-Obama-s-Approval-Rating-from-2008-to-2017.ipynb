@@ -22,6 +22,9 @@ data.head()
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 plt.show()
 
+![02 Showing basic time series scatter plot](https://user-images.githubusercontent.com/48648985/55743913-71bfce80-5a2b-11e9-90d4-5100a1f5ed9e.png)
+
+
 #### To aggregate the data and summarise it, one method that is effective is to use the mean
 ####  approval percentage for each month. This can be acheived by using the groupby function:
 
