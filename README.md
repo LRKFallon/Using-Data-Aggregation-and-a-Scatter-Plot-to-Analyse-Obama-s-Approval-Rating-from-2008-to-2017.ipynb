@@ -17,6 +17,8 @@ data = pd.read_csv('obama.csv', parse_dates=['year_month'])
 ####  time series graph.
 data.head()
 
+![01 parse dates function to group data](https://user-images.githubusercontent.com/48648985/55742446-9e71e700-5a27-11e9-9752-ce5f523e2c30.png)
+
 plt.plot(data.year_month, data.approve_percent, 'o', markersize=2, alpha=0.3)
 plt.show()
 
